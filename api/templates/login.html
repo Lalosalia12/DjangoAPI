@@ -1,35 +1,48 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'login.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/puesto.png' %}" type="image/x-icon">
     <title>Login</title>
 </head>
+
 <body>
     <div class="container-fluid bg-light">
         <div class="row justify-content-center align-items-center min-vh-100">
             <div class="col-md-4">
                 <div class="card p-4 shadow-sm border-0">
                     <div class="card-body">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div id="error-message" class="alert alert-danger">
+                                    <h4 class="alert-heading">{{ message }}</h4>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                
                         <h4 class="text-center mb-4 font-weight-bold">Welcome Back</h4>
                         <form method="post">
                             {% csrf_token %}
                             <div class="form-group">
                                 <label for="username">Enter your username</label>
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+                                <input type="text" class="form-control" id="username" name="username"
+                                    placeholder="Enter username" required>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Password" required>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Login</button>
                         </form>
-                        
-                        
-                        <button type="submit" class="btn btn-danger btn-block btn-lg shadow-lg mt-2">Google Sign in</button>
+
+                        <button type="button" class="btn btn-danger btn-block btn-lg shadow-lg mt-2">Google Sign
+                            in</button>
 
                         <div class="text-center mt-3">
                             <a href="{% url 'recuperar' %}" class="text-decoration-none">Forgot your password?</a>
@@ -42,5 +55,7 @@
             </div>
         </div>
     </div>
+    <script>src="{% static 'js/alerts/alert_login.js'%}"</script>
 </body>
+
 </html>

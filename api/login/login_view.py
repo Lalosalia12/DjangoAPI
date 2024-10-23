@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-
+from django.contrib import messages
 def login_views(request):
     template_name = "login.html"
     
@@ -17,7 +17,7 @@ def login_views(request):
             login(request, user)
             return redirect('home')
         else:
-            return render(request, template_name, {'error': 'Credenciales inválidas'})
+            messages.error (request, 'Invalid login credentials')
     
     return render(request, template_name)
 
