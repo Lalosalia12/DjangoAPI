@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
 
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
@@ -42,11 +44,20 @@
                     <li><a href="login.html"><span class="icon icon-person"></span></a></li>
                     <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
                     <li>
-                      <a href="cart.html" class="site-cart">
-                        <span class="icon icon-shopping_cart"></span>
-                        <span class="count">2</span>
+                        <a href="{% url 'salir' %}">
+                            <span class="fas fa-heart-broken"></span>
+                            <span class="count"></span>
+                    
                       </a>
                     </li> 
+                    <li>
+                        <a href="cart.html" class="site-cart">
+                            <span class="icon icon-shopping_cart"></span>
+                            <span class="count">2</span>
+                          </a>
+                          
+                        </a>
+                      </li>
                     <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
                   </ul>
                 </div> 

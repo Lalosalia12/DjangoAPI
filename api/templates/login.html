@@ -15,19 +15,20 @@
                 <div class="card p-4 shadow-sm border-0">
                     <div class="card-body">
                         <h4 class="text-center mb-4 font-weight-bold">Welcome Back</h4>
-                        <form method="post" action="{% url 'home' %}">
+                        <form method="post">
                             {% csrf_token %}
                             <div class="form-group">
-                                <label for="email">Email address</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
-
+                                <label for="username">Enter your username</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Password"required>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Login</button>
                         </form>
+                        
+                        
                         <button type="submit" class="btn btn-danger btn-block btn-lg shadow-lg mt-2">Google Sign in</button>
 
                         <div class="text-center mt-3">
