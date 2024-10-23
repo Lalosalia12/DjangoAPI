@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
     <link rel="shortcut icon" href="{% static 'images/puesto.png' %}" type="image/x-icon">
     <title>Forgot Password</title>
 </head>
@@ -26,7 +26,7 @@
                             <button type="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Reset Password</button>
                         </form>
                         <div class="text-center mt-3">
-                            <a href="login.html" class="text-decoration-none">Back to Login</a>
+                            <a href="{% url 'login' %}" class="text-decoration-none">Back to Login</a>
                         </div>
                     </div>
                 </div>
