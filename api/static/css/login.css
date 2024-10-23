@@ -1,0 +1,34 @@
+body {
+    background-color: #f7f7f7; /* Similar to the light background of the site */
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #6c63ff; /* Accent color that can match with buttons or call-to-action sections */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #5a55d6;
+}
+
+h4 {
+    color: #333333; /* Matches with the general typography colors */
+}
+
+.form-control {
+    border-radius: 8px;
+}
+
+a {
+    color: #6c63ff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
