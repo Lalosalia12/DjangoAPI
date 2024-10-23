@@ -16,6 +16,9 @@ body {
 .btn-primary:hover {
     background-color: #5a55d6;
 }
+.btn-primary:hover {
+    background-color: #5a55d6;
+}
 
 h4 {
     color: #333333; /* Matches with the general typography colors */
